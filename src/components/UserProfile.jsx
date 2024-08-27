@@ -1,9 +1,9 @@
 import React from "react";
 import { FaRegEdit } from "react-icons/fa";
 const UserProfile = ({ user }) => {
+  console.log("user=", user);
   const preferenceGroup = user.preference_group;
-//   const preference = preferenceGroup.group_preference;
-  console.log('user=',user)
+  console.log("preferenceGroup", preferenceGroup);
 
   return (
     <div className="bg-gray-700 bg-opacity-80 text-white shadow-md w-max flex flex-col gap-3 rounded-xl p-6">
@@ -32,11 +32,6 @@ const UserProfile = ({ user }) => {
           </p>
           <p className="text-base">{user.subscription}</p>
         </div>
-
-        <button className="ml-9">
-          {" "}
-          <FaRegEdit />
-        </button>
       </div>
       <hr />
       <div className="flex gap-4 justify-between">
@@ -52,32 +47,32 @@ const UserProfile = ({ user }) => {
       </div>
       <hr />
 
-      {/* <div className="flex gap-4 justify-between">
+      <div className="flex gap-4 justify-between">
         <h1 className="text-lg font-bold p-2">Group</h1>
 
-        {preferenceGroup.map((group) => {
-          <div>
-            <p className="font-semibold italic">Name </p>
-            <p>{group.group_name}</p>
-          </div>;
-          <div>
-            <p className="font-semibold italic">Description </p>
-            <p> {group.group_description}</p>
-          </div>;
-        })}
+        {preferenceGroup.map((group, index) => (
+          <div key={index}>
+            <div>
+              <p className="font-semibold italic">Name</p>
+              <p>{group.group_name}</p>
+            </div>
+            <div>
+              <p className="font-semibold italic">Description</p>
+              <p>{group.group_description}</p>
+            </div>
 
-        {preference.map((pref) => {
-          <div className="flex flex-col">
-            <p className="font-semibold italic">Preference </p>
-
-            <p> {preference.preference_name}</p>
-            <p> {preference.preference_value}</p>
-            <p> {preference.preference_description}</p>
-          </div>;
-        })}
-      </div> */}
+            {group.group_preference && group.group_preference.map((pref, i) => (
+              <div key={i} className="flex flex-col">
+                <p className="font-semibold italic">Preference</p>
+                <p>{pref.preference_name}</p>
+                <p>{pref.preference_value}</p>
+                <p>{pref.preference_description}</p>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
-
 export default UserProfile;
