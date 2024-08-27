@@ -1,0 +1,34 @@
+[
+  {
+    "email": "muhammad12@jjfonseca.onmicrosoft.com",
+    "token": "rX264piPcz58K6Ui",
+    "username": "muhammad",
+    "dob": "01-13-2000",
+    "profile_picture": null,
+    "subscription": "subscription_status_here",
+    "device_id": "deviceID01",
+    "device_name": "device_name_here",
+    "country": "PAKISTAN",
+    "preference_group": [
+      {
+        "group_name": "group_name_here",
+        "group_description": "group_description_here",
+        "group_id": "group_id_here",
+        "group_preference": [
+          {
+            "preference_name": "preference_name_here",
+            "preference_description": "preference_description_here",
+            "preference_id": "preference_id_here",
+            "preference_value": "preference_value_here"
+          }
+        ]
+      }
+    ],
+    "id": "ee7ad721-1e4a-4219-be40-a973b718da34",
+    "_rid": "dL1ZAIw829oQAAAAAAAAAA==",
+    "_self": "dbs/dL1ZAA==/colls/dL1ZAIw829o=/docs/dL1ZAIw829oQAAAAAAAAAA==/",
+    "_etag": "\"1000aa3d-0000-0200-0000-66c8e39a0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1724441498
+  }
+]
